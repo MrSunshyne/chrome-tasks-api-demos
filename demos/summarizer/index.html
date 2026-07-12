@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Summarizer — Chrome Task API demos</title>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+
+<a class="backlink hand-drawn-underline" href="../../">← all demos</a>
+
+<header class="masthead">
+  <h1><span class="squiggle">Summarizer</span></h1>
+  <p class="folio" id="folio"></p>
+  <p class="motto">One API, four <code>type</code> options. Summarize the same text as a
+    headline, a teaser, a tl;dr and key points — all on-device, streaming as they generate.</p>
+</header>
+
+<main>
+  <section class="card" id="summarizer-demo">
+    <h2>Summarizer <span class="desk-sub">stable since Chrome 138 · four summary types</span></h2>
+    <p class="hint">Use the sample text or paste your own — output streams in as it generates.</p>
+
+    <textarea id="article-text" rows="7"></textarea>
+    <div class="controls">
+      <button id="summarize-btn">Summarize four ways</button>
+    </div>
+
+    <div class="quad">
+      <div class="quad-cell"><h3>Headline</h3><div class="output" data-sum="headline" aria-live="polite"></div></div>
+      <div class="quad-cell"><h3>Teaser</h3><div class="output" data-sum="teaser" aria-live="polite"></div></div>
+      <div class="quad-cell"><h3>TL;DR</h3><div class="output" data-sum="tldr" aria-live="polite"></div></div>
+      <div class="quad-cell"><h3>Key points</h3><div class="output" data-sum="key-points" aria-live="polite"></div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Runs locally through Chrome's built-in Summarizer API ·
+    <a href="https://developer.chrome.com/docs/ai/summarizer-api" target="_blank" rel="noopener" class="hand-drawn-underline">API documentation</a></p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
