@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Writer &amp; Rewriter — Chrome Task API demos</title>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+
+<a class="backlink hand-drawn-underline" href="../../">← all demos</a>
+
+<header class="masthead">
+  <h1><span class="squiggle">Writer &amp; Rewriter</span></h1>
+  <p class="folio" id="folio"></p>
+  <p class="motto">The Writer drafts text from a brief, with tone and length options. The
+    Rewriter then shifts the tone of an existing text in either direction.</p>
+  <p class="notice">Origin trial ended — needs flags on stable Chrome, see the
+    <a href="https://github.com/MrSunshyne/chrome-tasks-api-demos#readme" class="hand-drawn-underline">README</a></p>
+</header>
+
+<main>
+  <section class="card" id="writer-demo">
+    <h2>Writer &amp; Rewriter <span class="desk-sub">origin trial ended · needs flags on stable Chrome</span></h2>
+
+    <label for="story-idea">Brief</label>
+    <input id="story-idea" type="text" value="a short email inviting the neighbours to a weekend barbecue">
+
+    <div class="controls">
+      <label>Tone
+        <select id="write-tone">
+          <option value="casual">casual</option>
+          <option value="neutral" selected>neutral</option>
+          <option value="formal">formal</option>
+        </select>
+      </label>
+      <label>Length
+        <select id="write-length">
+          <option value="short" selected>short</option>
+          <option value="medium">medium</option>
+          <option value="long">long</option>
+        </select>
+      </label>
+      <button id="write-btn">Write it</button>
+    </div>
+
+    <div class="output" id="write-out" aria-live="polite"></div>
+
+    <div class="controls">
+      <button id="rewrite-formal-btn" disabled>More formal</button>
+      <button id="rewrite-casual-btn" disabled>More casual</button>
+    </div>
+    <div class="output" id="rewrite-out" aria-live="polite"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Runs locally through Chrome's built-in Writer and Rewriter APIs ·
+    <a href="https://developer.chrome.com/docs/ai/writer-api" target="_blank" rel="noopener" class="hand-drawn-underline">Writer docs</a> ·
+    <a href="https://developer.chrome.com/docs/ai/rewriter-api" target="_blank" rel="noopener" class="hand-drawn-underline">Rewriter docs</a></p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
