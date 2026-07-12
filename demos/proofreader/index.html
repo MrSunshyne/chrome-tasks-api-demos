@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proofreader — Chrome Task API demos</title>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+
+<a class="backlink hand-drawn-underline" href="../../">← all demos</a>
+
+<header class="masthead">
+  <h1><span class="squiggle">Proofreader</span></h1>
+  <p class="folio" id="folio"></p>
+  <p class="motto">The Proofreader returns corrections with exact character positions —
+    marked in red below — plus the fully corrected text. The sample draft has plenty to find.</p>
+  <p class="notice">Origin trial ended — needs flags on stable Chrome, see the
+    <a href="https://github.com/MrSunshyne/chrome-tasks-api-demos#readme" class="hand-drawn-underline">README</a></p>
+</header>
+
+<main>
+  <section class="card" id="proofread-demo">
+    <h2>Proofreader <span class="desk-sub">origin trial ended · needs flags on stable Chrome</span></h2>
+
+    <textarea id="letter-text" rows="5"></textarea>
+    <div class="controls">
+      <button id="proofread-btn">Proofread</button>
+    </div>
+    <div class="output" id="proof-marked" aria-live="polite"></div>
+    <div class="output" id="proof-fixed" aria-live="polite"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Runs locally through Chrome's built-in Proofreader API ·
+    <a href="https://developer.chrome.com/docs/ai/proofreader-api" target="_blank" rel="noopener" class="hand-drawn-underline">API documentation</a></p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
