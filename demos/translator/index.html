@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language Detector &amp; Translator — Chrome Task API demos</title>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+
+<a class="backlink hand-drawn-underline" href="../../">← all demos</a>
+
+<header class="masthead">
+  <h1><span class="squiggle">Detector &amp; Translator</span></h1>
+  <p class="folio" id="folio"></p>
+  <p class="motto">Two APIs chained: detect the language of a message with confidence
+    scores, then translate it. Each language pair downloads its own small pack on first use.</p>
+</header>
+
+<main>
+  <section class="card" id="translate-demo">
+    <h2>Language Detector &amp; Translator <span class="desk-sub">stable since Chrome 138 · two APIs chained</span></h2>
+    <p class="hint">Pick a sample message, detect its language, then translate it.</p>
+
+    <div class="controls">
+      <label>Sample
+        <select id="wire-pick"></select>
+      </label>
+    </div>
+    <textarea id="wire-text" rows="3"></textarea>
+
+    <div class="controls">
+      <button id="detect-btn">Detect language</button>
+      <label>Translate to
+        <select id="target-lang">
+          <option value="en" selected>English (en)</option>
+          <option value="fr">French (fr)</option>
+          <option value="de">German (de)</option>
+          <option value="es">Spanish (es)</option>
+          <option value="ja">Japanese (ja)</option>
+        </select>
+      </label>
+      <button id="translate-btn" disabled>Translate</button>
+    </div>
+
+    <div class="output" id="detect-out" aria-live="polite"></div>
+    <div class="output" id="translate-out" aria-live="polite"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Runs locally through Chrome's built-in Translator and Language Detector APIs ·
+    <a href="https://developer.chrome.com/docs/ai/translator-api" target="_blank" rel="noopener" class="hand-drawn-underline">Translator docs</a> ·
+    <a href="https://developer.chrome.com/docs/ai/language-detection" target="_blank" rel="noopener" class="hand-drawn-underline">Detector docs</a></p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
