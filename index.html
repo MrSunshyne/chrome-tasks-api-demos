@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chrome built-in AI — Task API demos</title>
+  <link rel="stylesheet" href="shared/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+
+<header class="masthead">
+  <h1><span class="squiggle">The Task APIs</span></h1>
+  <p class="folio" id="folio"></p>
+  <p class="motto">Chrome ships small task-specific AI APIs that run on-device. Each demo
+    below exercises one of them, with its own example. Nothing is sent to a server.</p>
+  <p class="notice">Needs Chrome 138 or newer on desktop · flags and hardware notes in the <a href="https://github.com/MrSunshyne/chrome-tasks-api-demos#readme" class="hand-drawn-underline">README</a></p>
+</header>
+
+<main>
+
+  <!-- ── Availability ──────────────────────────────────────────── -->
+  <section class="card" id="status-board">
+    <h2>Availability <span class="desk-sub">model status &amp; downloads</span></h2>
+    <p class="hint">An API can be <code>unavailable</code>, <code>downloadable</code>,
+      <code>downloading</code> or <code>available</code>. Models download once and stay on
+      the machine. The browser only starts a download after a click.</p>
+    <div class="chips" id="chips" aria-live="polite"></div>
+    <p class="hint" id="status-note"></p>
+  </section>
+
+  <!-- ── Demos ─────────────────────────────────────────────────── -->
+  <div class="demo-list">
+    <a class="card" href="demos/summarizer/">
+      <h3>Summarizer</h3>
+      <p>One story, four summary types side by side — headline, teaser, tl;dr and key points — streaming as they generate.</p>
+    </a>
+    <a class="card" href="demos/translator/">
+      <h3>Language Detector &amp; Translator</h3>
+      <p>Detect the language of a message with confidence scores, then translate it. Two APIs chained.</p>
+    </a>
+    <a class="card" href="demos/writer-rewriter/">
+      <h3>Writer &amp; Rewriter</h3>
+      <p>Draft a text from a brief with tone and length options, then push its tone in either direction.</p>
+    </a>
+    <a class="card" href="demos/proofreader/">
+      <h3>Proofreader</h3>
+      <p>Corrections with exact character ranges, marked in place, plus the fully corrected text.</p>
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <p>Everything here runs locally through Chrome's built-in AI APIs ·
+    <a href="https://developer.chrome.com/docs/ai/built-in-apis" target="_blank" rel="noopener" class="hand-drawn-underline">API documentation</a></p>
+</footer>
+
+<script type="module" src="index.js"></script>
+</body>
+</html>
